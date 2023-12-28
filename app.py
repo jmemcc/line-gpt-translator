@@ -60,14 +60,14 @@ def get_translation(message_text):
             messages=[
                 {
                     "role": "system",
-                    "content": "You will be provided either a sentence in English or in Japanese. Please translate the sentence into the other language.",
+                    "content": "You will be provided either a sentence in English or in Japanese. Reply with only a translated version of the sentence into the other language.",
                 },
                 {
                     "role": "user", 
                     "content": f"{message_text}"
                 },
             ],
-            temperature=0.2,
+            temperature=0.3,
         )
         return response.choices[0].message.content
     except Exception as e:
