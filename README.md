@@ -20,7 +20,7 @@ gh repo clone jmemcc/chatline-gpt-translator
 
 ## Setup 
 
-Create an [OpenAI API key](https://platform.openai.com/api-keys), and a [LINE Developer account](https://developers.line.biz/en/). In your LINE Developer console, create a channel with [Messaging API](https://developers.line.biz/en/services/messaging-api/) type. 
+Create an [OpenAI API key](https://platform.openai.com/api-keys), and a [LINE Developer account](https://developers.line.biz/). In your LINE Developer console, create a channel with [Messaging API](https://developers.line.biz/en/services/messaging-api/) type. 
 
 Export variables below to your server.
 

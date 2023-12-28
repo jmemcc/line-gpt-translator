@@ -19,7 +19,7 @@ gh repo clone jmemcc/chatline-gpt-translator
 ```
 
 ## 設定
-[OpenAI API key](https://platform.openai.com/api-keys) キーと[LINE Developer account](https://developers.line.biz/jp/)アカウントを作成します。LINE Developerコンソールで、[Messaging API](https://developers.line.biz/en/services/messaging-api/)タイプのチャンネルを作成します。
+[OpenAI API key](https://platform.openai.com/api-keys) キーと[LINE Developer account](https://developers.line.biz/)アカウントを作成します。LINE Developerコンソールで、[Messaging API](https://developers.line.biz/en/services/messaging-api/)タイプのチャンネルを作成します。
 
 以下の変数をサーバーにエクスポートします。
 
@@ -27,7 +27,7 @@ gh repo clone jmemcc/chatline-gpt-translator
 # OpenAI開発者セクションで見つかる (https://platform.openai.com/api-keys)
 export OPENAI_API_KEY=YOUR_KEY_HERE
 
-# LINE Developerページの 'Messaging API' タブの下で、あなたのボットのチャンネルのために見つかる (https://developers.line.biz/console/channel/YOUR_CHANNEL_ID/messaging-api)
+# LINE Developerページの 『Messaging API』 タブの下で、あなたのボットのチャンネルのために見つかる (https://developers.line.biz/console/channel/YOUR_CHANNEL_ID/messaging-api)
 export LINE_CHANNEL_SECRET=YOUR_KEY_HERE
 export LINE_CHANNEL_ACCESS_TOKEN=YOUR_KEY_HERE
 ```
@@ -39,7 +39,7 @@ LINEはメッセージングAPIチャネルを使用するためにサーバー�
 ngrok http 8000
 ```
 
-メッセージングAPIタブに移動し、ngrokによって生成されたURLに`/callback`を追加して**Webhook URL**を設定します（例：`https://xxxx-xxx-xxx-xx-xx.ngrok-free.app/callback`）。**Webhookを使用**をオンにして、**検証**をクリックします。'Success'というメッセージが表示されるはずです。
+メッセージングAPIタブに移動し、ngrokによって生成されたURLに`/callback`を追加して**Webhook URL**を設定します（例：`https://xxxx-xxx-xxx-xx-xx.ngrok-free.app/callback`）。**Webhookを使用**をオンにして、**検証**をクリックします。『Success』というメッセージが表示されるはずです。
 
 **LINE公式アカウントの機能**は好きなように設定してください。
 
