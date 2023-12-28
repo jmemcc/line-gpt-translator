@@ -22,6 +22,8 @@ gh repo clone jmemcc/chatline-gpt-translator
 ## 設定
 [OpenAI API key](https://platform.openai.com/api-keys) キーと[LINE Developer account](https://developers.line.biz/)アカウントを作成します。LINE Developerコンソールで、[Messaging API](https://developers.line.biz/en/services/messaging-api/)タイプのチャンネルを作成します。
 
+### ローカル/VPSサーバー
+
 以下の変数をサーバーにエクスポートします。
 
 ```bash
@@ -43,6 +45,20 @@ ngrok http 8000
 メッセージングAPIタブに移動し、ngrokによって生成されたURLに`/callback`を追加して**Webhook URL**を設定します（例：`https://xxxx-xxx-xxx-xx-xx.ngrok-free.app/callback`）。**Webhookを使用**をオンにして、**検証**をクリックします。『Success』というメッセージが表示されるはずです。
 
 **LINE公式アカウントの機能**は好きなように設定してください。
+
+### Vercel
+
+
+このリポジトリをあなたのGitHubにフォークし、フォークから新しいVercelプロジェクトを作成します。
+
+**プロジェクトの設定**セクションでは、全て同じにして、`OPENAI_API_KEY`、`LINE_CHANNEL_SECRET`、`LINE_CHANNEL_ACCESS_TOKEN`を**環境変数**として追加します。
+
+プロジェクトをデプロイしたら、デプロイが完了すると:
+- **ドメイン**の下のURLをコピーします
+- LINEチャネルページのメッセージングAPIタブに移動します
+- **Webhook URL**にこのURLを貼り付け、文字列に`/callback`を追加します（例：`https://xxxxxxxxx.vercel.app/callback`）
+- **Webhookを使用**をオンにし、**検証**をクリックします。'Success'というメッセージが表示されれば、ボットはサーバーに接続できています。
+- **LINE公式アカウントの機能**の下の**自動返信メッセージ**オプションを無効にし、**グループチャットへのボットの参加を許可**を有効にします。
 
 
 ## 使用方法
