@@ -79,6 +79,10 @@ def get_translation(message_text):
 app = Flask(__name__)
 
 
+@app.route('/')
+def home():
+    return 'Hello, World!'
+
 @app.route("/callback", methods=["POST"])
 def callback():
     """
