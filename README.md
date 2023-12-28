@@ -9,6 +9,7 @@ ChatLINE GPT Translator is a Python app that translates messages in LINE from Ja
 - Python >= 3.8
 - line-bot-sdk >= 3.7.0
 - Flask >= 3.0.0
+- Gunicorn >= 21.2.0
 
 ## Installation
 
@@ -33,7 +34,7 @@ export LINE_CHANNEL_SECRET=YOUR_KEY_HERE
 export LINE_CHANNEL_ACCESS_TOKEN=YOUR_KEY_HERE
 ```
 
-LINE requires Messaging API channels to use a server. Use your hosting method of choice, below [ngrok](https://ngrok.com/) is used as an example.
+LINE requires Messaging API channels to use an internet connected server. Use your hosting method of choice, below [ngrok](https://ngrok.com/) is used as an example.
 
 ```bash
 ngrok http 8000
@@ -45,9 +46,13 @@ Set the **LINE Official Account features** however you wish.
 
 ## Usage
 
-Start the app with the server running.
+Start the app with internet connected server running.
 
 ```bash
+# run with 4 processes to manage multiple messages
+gunicorn -w 4 -b 0.0.0.0:8000 app:app
+
+# or run using just 1 process using Flask
 python app.py
 ```
 

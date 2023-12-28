@@ -9,6 +9,7 @@ ChatLINE GPT Translatorは、GPT-3 Turbo APIを使用してLINEのメッセー�
 - Python >= 3.8
 - line-bot-sdk >= 3.7.0
 - Flask >= 3.0.0
+- Gunicorn >= 21.2.0
 
 ## インストール
 
@@ -32,7 +33,7 @@ export LINE_CHANNEL_SECRET=YOUR_KEY_HERE
 export LINE_CHANNEL_ACCESS_TOKEN=YOUR_KEY_HERE
 ```
 
-LINEはメッセージングAPIチャネルを使用するためにサーバーが必要です。好きなホスティング方法を使用してください。以下に[ngrok](https://ngrok.com/)を例として使用します。
+LINEはインターネットに接続されたサーバーを使用してメッセージングAPIチャネルを使用する必要があります。好きなホスティング方法を使用してください。以下に[ngrok](https://ngrok.com/)を例として使用します。
 
 
 ```bash
@@ -46,7 +47,7 @@ ngrok http 8000
 
 ## 使用方法
 
-サーバーを起動してアプリを開始します。
+インターネットに接続されたサーバーを起動した状態でアプリを開始します。
 
 ```bash
 python app.py
