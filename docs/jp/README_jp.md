@@ -1,8 +1,8 @@
-# ChatLINE GPT Translator
+# LINE GPT Translator
 
-ChatLINE GPT Translatorは、GPT-3 Turbo APIを使用してLINEのメッセージを日本語から英語へ（その逆も同様）に翻訳するPythonアプリです。
+LINE GPT Translatorは、GPT-3 Turbo APIを使用してLINEのメッセージを日本語から英語へ（その逆も同様）に翻訳するPythonアプリです。
 
-> [The English version of this document is available here](https://github.com/jmemcc/chatline-gpt-translator/blob/master/README.md)
+> [The English version of this document is available here](https://github.com/jmemcc/line-gpt-translator/blob/master/README.md)
 
 ## 必要条件
 
@@ -16,7 +16,7 @@ ChatLINE GPT Translatorは、GPT-3 Turbo APIを使用してLINEのメッセー�
 GitHubからリポジトリをプルします。
 
 ```bash
-gh repo clone jmemcc/chatline-gpt-translator
+gh repo clone jmemcc/line-gpt-translator
 ```
 
 ## 設定
